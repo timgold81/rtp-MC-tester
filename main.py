@@ -121,7 +121,7 @@ class Packet:
         return output
 
     def gen_ssrc(self):
-        self.SSRC=randint(0,1073741824)
+        self.SSRC=randint(1000000001,1073741824)
 
     def decode(self,data):
         pass
@@ -157,6 +157,9 @@ class sender_worker(threading.Thread):
         while config.operation_status:
             # if report==0:
             # print (f'Sending {self.ip_addr} to port {self.port_nu} the data {p.get_packet_hex()[32:]}')
+
+            # print(f"Port: {self.port_nu} - {p.get_packet_hex()}")
+
             arrr=bytearray.fromhex(p.get_packet_hex())
 
             sock.sendto(arrr, (self.ip_addr,int(self.port_nu)))
