@@ -1,5 +1,5 @@
 # rtp-MC-tester
-Tests Multicast RTP traffic. As a client, will send RTP traffic to specified RTP address from specifically selected interface. As a server will listen to MC RTP traffic and tell if the traffic di arrive or not.
+Tests Multicast RTP traffic. As a client, will send RTP traffic to specified multicast address from specifically selected interface. As a server will listen to MC RTP traffic and tell if the traffic di arrive or not.
 <pre>
 python main.py -h
 usage: main.py [-h] [-s SENDER] -i INTERFACE_IP [-r RECEIVER] [-p PORT] [-a AMOUNT] [-n NUMBER_OF_PACKETS]
